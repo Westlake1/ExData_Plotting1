@@ -4,8 +4,12 @@
 ## June, 2015
 
 
-# --- set the working directory
+# --- Create my Working Directory if it doesn't exist
+if(!file.exists("c:/J_Files")){dir.create("c:/J_Files")}
+if(!file.exists("c:/J_Files/Coursera")){dir.create("c:/J_Files/Coursera")}
 if(!file.exists("c:/J_Files/Coursera/EDA")){dir.create("c:/J_Files/Coursera/EDA")}
+
+# --- set the working directory
 setwd("c:/J_Files/Coursera/EDA")
 
 # --- get the working directory to verify it is set correctly

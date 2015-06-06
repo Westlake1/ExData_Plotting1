@@ -3,8 +3,13 @@
 ## Course Project 1, plot 2
 ## June, 2015
 
-# --- set the working directory
+
+# --- Create my Working Directory if it doesn't exist
+if(!file.exists("c:/J_Files")){dir.create("c:/J_Files")}
+if(!file.exists("c:/J_Files/Coursera")){dir.create("c:/J_Files/Coursera")}
 if(!file.exists("c:/J_Files/Coursera/EDA")){dir.create("c:/J_Files/Coursera/EDA")}
+
+# --- set the working directory
 setwd("c:/J_Files/Coursera/EDA")
 
 # --- get the working directory to verify it is set correctly
@@ -41,8 +46,8 @@ ed$TS <- strptime(paste(ed$Date,ed$Time),"%d/%m/%Y %H:%M:%S")
 # install.packages("ggplot2")
 library(ggplot2)
 #library(datasets)
-plot(ed$TS, as.numeric(ed$Global_active_power), typ='l', main = "Plot 2",
-     xlab = "Day and Time", ylab = "Global Active Power (kilowatts)")
+plot(ed$TS, as.numeric(ed$Global_active_power), typ='l',  # main = "Plot 2",
+     xlab = " ", ylab = "Global Active Power (kilowatts)")
 
 # --- copy the plot to a PNG file
 dev.copy(device = png, filename = 'plot2.png', width = 480, height = 480)
